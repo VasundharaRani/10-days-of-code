@@ -7,25 +7,23 @@
 :root {
   --ff: "Inter", sans-serif;
   --fc-primary: #ffe0f0; /* Pink-tinted white for text */
-  --fc-blue: #ff1493; /* Deep pink for accents */
+  --fc-blue: #00e5ff; /* Deep pink for accents */
   --fc-gold: #ff1493; /* Deep pink accent */
   --fc-yellow: #ff66cc; /* Light pink */
   --fs-small: 1rem;
   --fs-large: 3.9rem;
-  --bg: #2d1a3d; /* Dark purple-black */
-  --bg-dark: #1a0a1e; /* Very dark purple */
+  --bg: #0a2540; /* Deep navy blue */
+  --bg-dark: #020817;  /* Very dark blue-black */
   --bg-grad: linear-gradient(
     90deg,
-    #ff1493 0%, /* Deep pink */
-    #9d4edd 50%, /* Purple */
-    #ff66cc 100% /* Light pink */
+    #0a2540 0%, /* Deep navy */
+    #1e4976 50%, /* Medium blue */
+    #00b4d8 100% /* Bright cyan */
   );
-  --neon-pink: #ff1493;
-  --neon-light-pink: #ff66cc;
-  --neon-purple: #9d4edd;
-  --electric-purple: #9d4edd;
-  --medium-violet-red: #ff66cc;
-  --deep-pink: #ff1493;
+  --neon-blue: #00e5ff;
+  --neon-cyan: #00ffff;
+  --electric-blue: #4dabf7;
+  --dark-cyan: #0077b6;
   
 	/*========== Colors for projects==========*/
 	/*Color mode HSL(hue, saturation, lightness)*/
@@ -63,7 +61,7 @@
 }
 
 .grad-bg-text:hover {
-  filter: brightness(150%) drop-shadow(5px 5px 10px #ff1493);
+  filter: brightness(150%) drop-shadow(5px 5px 10px #00e5ff);
 }
 
 a {
@@ -92,15 +90,15 @@ html {
 }
 
 .background {
-  background: #1a0a1e;
+  background: #020817;
   background-image: 
     /* Diagonal pattern */
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 80px,
-      rgba(255, 20, 147, 0.02) 80px,
-      rgba(255, 20, 147, 0.02) 160px
+      rgba(0,229, 147, 0.02) 80px,
+      rgba(0,229, 147, 0.02) 160px
     ),
     repeating-linear-gradient(
       -45deg,
@@ -110,8 +108,8 @@ html {
       rgba(255, 20, 147, 0.02) 160px
     ),
     /* Ambient glow */
-    radial-gradient(ellipse at 30% 20%, rgba(255, 20, 147, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(255, 20, 147, 0.04) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 20%, rgba(0,229, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(77,171,247, 0.04) 0%, transparent 50%);
   min-height: 100vh;
   position: relative;
 }
@@ -124,8 +122,8 @@ html {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 25% 30%, rgba(255, 20, 147, 0.04) 0%, transparent 30%),
-    radial-gradient(circle at 75% 70%, rgba(255, 20, 147, 0.04) 0%, transparent 30%);
+    radial-gradient(circle at 25% 30%, rgba(0,229,255, 0.04) 0%, transparent 30%),
+    radial-gradient(circle at 75% 70%, rgba(77, 171, 247, 0.04) 0%, transparent 30%);
   pointer-events: none;
   z-index: 0;
 }
@@ -148,25 +146,25 @@ html {
   width: 90%;
   border-radius: 1.2em;
   z-index: 30000;
-  border: 1px solid rgba(255, 20, 147, 0.3);
+  border: 1px solid rgba(0,229,255, 0.3);
   backdrop-filter: blur(27px);
-  background: rgba(45, 26, 61, 0.6);
-  box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.2),
-              0 0 20px rgba(255, 20, 147, 0.1),
-              0 0 40px rgba(255, 20, 147, 0.05);
+  background: rgba(10, 37, 64, 0.6);
+  box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.2),
+              0 0 20px rgba(0, 229, 255, 0.1),
+              0 0 40px rgba(0, 229, 255, 0.05);
   animation: navGlow 3s ease-in-out infinite alternate;
 }
 
 @keyframes navGlow {
   from {
-    box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.2),
-                0 0 20px rgba(255, 20, 147, 0.1),
-                0 0 40px rgba(255, 20, 147, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.2),
+                0 0 20px rgba(0, 229, 255, 0.1),
+                0 0 40px rgba(0, 229, 255, 0.05);
   }
   to {
-    box-shadow: 0 1px 2px 0 rgba(255, 20, 147, 0.3),
-                0 0 25px rgba(255, 20, 147, 0.15),
-                0 0 50px rgba(255, 20, 147, 0.08);
+    box-shadow: 0 1px 2px 0 rgba(0, 229, 255, 0.3),
+                0 0 25px rgba(0, 229, 255, 0.15),
+                0 0 50px rgba(0, 229, 255, 0.08);
   }
 }
 
@@ -174,26 +172,23 @@ html {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  color: #ff1493;
-  text-shadow: 0 0 10px rgba(255, 20, 147, 0.8),
-               0 0 20px rgba(255, 20, 147, 0.5),
-               0 0 30px rgba(255, 20, 147, 0.3),
-               0 0 40px rgba(255, 102, 204, 0.2);
+  color: #00e5ff;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8),
+               0 0 20px rgba(0, 229, 255, 0.5),
+               0 0 30px rgba(0, 229, 255, 0.3);
   animation: titleGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes titleGlow {
   from {
-    text-shadow: 0 0 10px rgba(255, 20, 147, 0.8),
-                 0 0 20px rgba(255, 20, 147, 0.5),
-                 0 0 30px rgba(255, 20, 147, 0.3),
-                 0 0 40px rgba(255, 102, 204, 0.2);
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8),
+                 0 0 20px rgba(0, 229, 255, 0.5),
+                 0 0 30px rgba(0, 229, 255, 0.3);
   }
   to {
-    text-shadow: 0 0 15px rgba(255, 20, 147, 1),
-                 0 0 30px rgba(255, 20, 147, 0.6),
-                 0 0 45px rgba(255, 20, 147, 0.4),
-                 0 0 60px rgba(255, 102, 204, 0.3);
+    text-shadow: 0 0 15px rgba(0, 229, 255, 1),
+                 0 0 25px rgba(0, 229, 255, 0.6),
+                 0 0 40px rgba(0, 229, 255, 0.4);
   }
 }
 
@@ -261,7 +256,7 @@ html {
 /* Define the hover effect */
 .title a:hover {
   color: var(--fc-blue); /* Hover text color */
-  text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+  text-shadow: 0 0 10px rgba(0,229,255, 0.5);
 }
 
 /* Adjust the underline width on hover */
