@@ -785,7 +785,7 @@ filter: drop-shadow(0 0 5px rgba(0,229,255, 0.3));
   font-size: 4rem;
   font-weight: 700;
   /* background-image: url("../assets/Images/timeline.svg")  !important; */
-  background-image: linear-gradient(90deg, #ff1493, #9d4edd, #ff1493, #ff66cc, #ff66cc, #9d4edd, #ff1493, #ff1493);
+  background-image: linear-gradient(90deg,#00e5ff, #4dabf7, #00b4d8, #0077b6, #00ffff, #4dabf7, #00e5ff, #00b4d8);
   /* background: linear-gradient(30deg, #f9d751, #ffad53, #f7875f, #e5686b, #cc5075, #ae3f7a, #8e3479, #6c2d72);  */
   background-clip: text;
 -webkit-background-clip: text;
